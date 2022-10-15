@@ -1,0 +1,13 @@
+mixin section_foto_left(array)
+	section.section 
+		.section_in
+			each item in array
+				.img_left_section__wrapper
+					.img_left_section__photo
+						+picture({
+							img_class: 'cover_img',
+							img: `${item.img}`
+						}) 
+					.img_left_section__content
+						h2.img_left_section__title!= item.title
+						p.img_left_section__descr!= item.descr

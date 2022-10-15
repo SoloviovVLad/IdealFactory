@@ -1,0 +1,92 @@
+//---------------------------------------------sections
+.section {
+	position: relative;
+	width: 100%;
+	height: var(--full-screen);
+	font-size: 1rem;
+	&.demo_mod {
+		@extend %global_flex_block_row_nowrap_center_center;
+
+		height: calc(100vh - (var(--height-footer) + var(--height-header)));
+
+		font-size: 4rem;
+		color: $white;
+		text-align: center;
+
+		background-color: $black;
+	}
+}
+
+.section_in {
+	max-width: $page_width;
+	width: 100%;
+	height: inherit;
+	margin: 0 auto;
+}
+
+//section elements
+
+.section_wrapper {
+
+
+	@include bp($point_4) {
+		flex-direction: column-reverse;
+	}
+}
+
+.logo {
+	position: absolute;
+
+	width: 3.5rem;
+	height: 3.5rem;
+	
+	@include bp($point_1, min) {
+		top: 5rem;
+		left: 5rem;
+	}
+
+	@include bp($point_1) {
+		top: 2rem;
+		left: 2rem;
+	}
+	
+	&.section_logo--mod_color_1 {
+		color: $black;
+	}
+	&.section_logo--mod_color_2 {
+		color: $white;
+	}
+}
+
+.section_content {
+
+	@include bp($point_2, min) {
+		flex-basis: 66.66%;
+	}
+
+	@include bp($point_2) {
+		flex-basis: 50%;
+	}
+
+	@include bp($point_4) {
+		height: 50%;
+	}
+}
+
+// .section_photo {
+// 	height: var(--full-screen);
+
+// 	@include bp($point_2, min) {
+// 		flex-basis: 33.33%;
+// 	}
+
+// 	@include bp($point_2) {
+// 		flex-basis: 50%;
+// 	}
+
+// 	@include bp($point_4) {
+// 		height: 50%;
+// 	}
+// }
+
+

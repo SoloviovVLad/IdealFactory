@@ -1,0 +1,71 @@
+.img_center_section__wrapper {
+	@extend %global_flex_block_row_nowrap_space_between_stretch;
+
+	position: relative;
+	
+	height: inherit;
+
+	@include bp($point_2) {
+		flex-direction: column;
+	}
+}
+
+.img_center_section__content {
+	@extend %global_flex_block_column_nowrap_flex-start;
+
+	justify-content: flex-end;
+	flex-basis: 33.33%;
+	
+	background-color: $black;
+	
+	@include bp($point_1, min) {
+		padding: 5rem 5rem 6.4rem;
+	}
+	@include bp($point_1) {
+		padding: 2rem 2rem 4.4rem;
+	}
+	@include bp($point_2) {
+		height: 33.33%;
+	}
+}
+
+.img_center_section__title {
+	@extend %title_block_size_1;
+
+	color: $white;
+	@include bp($point_2, min) {
+		max-width: 44rem;
+	}
+
+	@include bp($point_2) {
+		max-width: 100%;
+		margin: auto auto;
+	}
+}
+
+.img_center_section__descr {
+	@extend %descr_block_color_1;
+
+	@include bp($point_2) {
+		margin: auto auto;
+	}
+}
+
+.img_center_section__photo {
+	@extend %photo_block;
+
+	@include bp($point_2) {
+		height: 33.33%;
+	}
+}
+
+.img_center_section__caption {
+	font-size: 2.4rem;
+	line-height: 3.4rem;
+	font-weight: 500;
+	color: $white;
+
+	@include bp($point_2) {
+		margin-top: auto;
+	}
+}
